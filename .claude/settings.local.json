@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "WebSearch",
+      "Bash(mkdir:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nInitial commit: Multi-Agent Translation Pipeline Experiment\n\nThis project implements a research experiment to measure semantic drift in \ntranslations caused by spelling errors. The system uses a chain of translation \nagents (English → French → Hebrew → English) to analyze translation quality \ndegradation.\n\nProject structure includes:\n- Agent definitions for three-stage translation pipeline\n- Experiment controller for orchestration\n- Input generation with configurable error rates\n- Analysis module for semantic distance measurement\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git branch:*)",
+      "Bash(git push:*)",
+      "Bash(gh repo view:*)",
+      "Bash(git pull:*)",
+      "Bash(python -m src.input_generator.generate_inputs:*)",
+      "Bash(python3:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

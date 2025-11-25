@@ -72,10 +72,23 @@ dmypy.json
 *.log
 logs/
 
-# Data files (if containing sensitive info)
-# Uncomment if needed:
-# data/private/
-# outputs/sensitive/
+# Data files (project-specific)
+data/raw/*.csv
+data/processed/*.json
+data/input/*.json
+*.db
+*.sqlite
+
+# Model files (can be large)
+*.pkl
+*.h5
+*.weights
+models/*.pt
+
+# Results and outputs
+results/experiments/*.json
+results/graphs/*.png
+results/graphs/*.pdf
 
 # OS
 Thumbs.db

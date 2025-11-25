@@ -1,0 +1,46 @@
+{
+  "name": "French_to_Hebrew_Translator",
+  "description": "Translates French text into Hebrew. Handles right-to-left (RTL) text encoding properly while preserving spelling variations from source.",
+  "purpose": "Second stage of multi-language translation pipeline (FR→HE)",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "French text to translate to Hebrew"
+      }
+    },
+    "required": ["text"],
+    "additionalProperties": false
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "translated_text": {
+        "type": "string",
+        "description": "Text translated from French to Hebrew (RTL)"
+      }
+    },
+    "required": ["translated_text"],
+    "additionalProperties": false
+  },
+  "skills": [
+    "french_language_comprehension",
+    "hebrew_translation",
+    "rtl_text_handling",
+    "character_encoding_utf8",
+    "spelling_error_preservation"
+  ],
+  "constraints": {
+    "language_pair": "FR→HE",
+    "stateless": true,
+    "encoding": "UTF-8",
+    "text_direction": "right_to_left",
+    "error_handling": "preserve_input_errors"
+  },
+  "transformation_rules": {
+    "preserve_spelling_errors": true,
+    "maintain_structure": true,
+    "handle_rtl_properly": true
+  }
+}

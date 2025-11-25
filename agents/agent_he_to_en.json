@@ -1,0 +1,45 @@
+{
+  "name": "Hebrew_to_English_Translator",
+  "description": "Translates Hebrew text back into English. Completes the translation cycle while preserving semantic drift from intermediate translations.",
+  "purpose": "Third stage of multi-language translation pipeline (HE→EN)",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "text": {
+        "type": "string",
+        "description": "Hebrew text to translate to English"
+      }
+    },
+    "required": ["text"],
+    "additionalProperties": false
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "translated_text": {
+        "type": "string",
+        "description": "Text translated from Hebrew to English"
+      }
+    },
+    "required": ["translated_text"],
+    "additionalProperties": false
+  },
+  "skills": [
+    "hebrew_language_comprehension",
+    "english_translation",
+    "rtl_text_handling",
+    "character_encoding_utf8",
+    "semantic_drift_preservation"
+  ],
+  "constraints": {
+    "language_pair": "HE→EN",
+    "stateless": true,
+    "encoding": "UTF-8",
+    "error_handling": "preserve_semantic_drift"
+  },
+  "transformation_rules": {
+    "preserve_semantic_changes": true,
+    "maintain_structure": true,
+    "capture_drift_effects": true
+  }
+}
