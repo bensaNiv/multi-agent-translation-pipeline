@@ -11,7 +11,11 @@
       "Bash(gh repo view:*)",
       "Bash(git pull:*)",
       "Bash(python -m src.input_generator.generate_inputs:*)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(chmod:*)",
+      "Bash(bash:*)",
+      "Bash(cat:*)",
+      "Bash(tree:*)"
     ],
     "deny": [],
     "ask": []
