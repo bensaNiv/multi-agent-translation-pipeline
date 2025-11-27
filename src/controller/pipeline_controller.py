@@ -1,10 +1,11 @@
 """Translation pipeline controller for agent orchestration."""
 
-import json
 import logging
 from datetime import datetime
-from pathlib import Path
 from typing import Dict, Any, List, Optional
+
+from .agent_invoker import AgentInvoker
+from .result_manager import ResultManager
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -17,8 +18,9 @@ class TranslationPipelineController:
     collects all intermediate translations, and stores results.
 
     Attributes:
-        agents: Dictionary mapping stage names to agent names
-        results: List of all experiment results
+        agent_invoker: Handler for agent invocations
+        result_manager: Handler for result storage
+        results: List of all experiment results (for compatibility)
 
     Example:
         >>> controller = TranslationPipelineController()
@@ -30,13 +32,18 @@ class TranslationPipelineController:
     """
 
     def __init__(self):
-        """Initialize controller with agent mappings."""
-        self.agents = {
-            "en_to_fr": "English_to_French_Translator",
-            "fr_to_he": "French_to_Hebrew_Translator",
-            "he_to_en": "Hebrew_to_English_Translator",
-        }
-        self.results: List[Dict[str, Any]] = []
+        """Initialize controller with agent invoker and result manager."""
+        self.agent_invoker = AgentInvoker()
+        self.result_manager = ResultManager()
+
+    @property
+    def results(self) -> List[Dict[str, Any]]:
+        """Get results for backward compatibility.
+
+        Returns:
+            List of all experiment results
+        """
+        return self.result_manager.get_results()
 
     def execute_pipeline(
         self,
@@ -68,7 +75,42 @@ class TranslationPipelineController:
             f"error_level={error_level}%"
         )
 
-        result = {
+        result = self._create_result_structure(
+            original_text, error_level, sentence_id
+        )
+
+        try:
+            self._execute_stage_1(result, original_text)
+            self._execute_stage_2(result)
+            self._execute_stage_3(result)
+
+            logger.info("✓ Pipeline completed successfully")
+
+        except Exception as e:
+            logger.error(f"✗ Pipeline failed: {e}")
+            result["metadata"]["error"] = str(e)
+            raise
+
+        self.result_manager.add_result(result)
+        return result
+
+    def _create_result_structure(
+        self,
+        original_text: str,
+        error_level: float,
+        sentence_id: Optional[int],
+    ) -> Dict[str, Any]:
+        """Create initial result structure.
+
+        Args:
+            original_text: Original text
+            error_level: Error percentage
+            sentence_id: Sentence identifier
+
+        Returns:
+            Result dictionary with initial structure
+        """
+        return {
             "sentence_id": sentence_id,
             "original_text": original_text,
             "error_level": error_level,
@@ -80,58 +122,41 @@ class TranslationPipelineController:
             },
         }
 
-        try:
-            stage_1_output = self._invoke_agent(
-                agent_name=self.agents["en_to_fr"],
-                input_text=original_text,
-            )
-            result["intermediate_translations"]["en_to_fr"] = stage_1_output
-            result["metadata"]["agents_executed"].append("en_to_fr")
-
-            stage_2_output = self._invoke_agent(
-                agent_name=self.agents["fr_to_he"],
-                input_text=stage_1_output,
-            )
-            result["intermediate_translations"]["fr_to_he"] = stage_2_output
-            result["metadata"]["agents_executed"].append("fr_to_he")
-
-            stage_3_output = self._invoke_agent(
-                agent_name=self.agents["he_to_en"],
-                input_text=stage_2_output,
-            )
-            result["final_english_text"] = stage_3_output
-            result["metadata"]["agents_executed"].append("he_to_en")
-
-            logger.info("✓ Pipeline completed successfully")
-
-        except Exception as e:
-            logger.error(f"✗ Pipeline failed: {e}")
-            result["metadata"]["error"] = str(e)
-            raise
-
-        self.results.append(result)
-        return result
-
-    def _invoke_agent(self, agent_name: str, input_text: str) -> str:
-        """Invoke a single translation agent.
-
-        NOTE: This is a stub implementation. In actual Claude Code,
-        this would use the Claude Code agent invocation mechanism.
+    def _execute_stage_1(self, result: Dict[str, Any], input_text: str):
+        """Execute stage 1: English to French translation.
 
         Args:
-            agent_name: Name of agent to invoke
+            result: Result dictionary to update
             input_text: Text to translate
-
-        Returns:
-            Translated text
-
-        Raises:
-            ValueError: If agent invocation fails
         """
-        logger.warning(
-            f"STUB: Invoking {agent_name} (placeholder translation)"
-        )
-        return f"[{agent_name}_output: {input_text[:30]}...]"
+        agent_name = self.agent_invoker.get_agent_name("en_to_fr")
+        output = self.agent_invoker.invoke(agent_name, input_text)
+        result["intermediate_translations"]["en_to_fr"] = output
+        result["metadata"]["agents_executed"].append("en_to_fr")
+
+    def _execute_stage_2(self, result: Dict[str, Any]):
+        """Execute stage 2: French to Hebrew translation.
+
+        Args:
+            result: Result dictionary to update
+        """
+        input_text = result["intermediate_translations"]["en_to_fr"]
+        agent_name = self.agent_invoker.get_agent_name("fr_to_he")
+        output = self.agent_invoker.invoke(agent_name, input_text)
+        result["intermediate_translations"]["fr_to_he"] = output
+        result["metadata"]["agents_executed"].append("fr_to_he")
+
+    def _execute_stage_3(self, result: Dict[str, Any]):
+        """Execute stage 3: Hebrew to English translation.
+
+        Args:
+            result: Result dictionary to update
+        """
+        input_text = result["intermediate_translations"]["fr_to_he"]
+        agent_name = self.agent_invoker.get_agent_name("he_to_en")
+        output = self.agent_invoker.invoke(agent_name, input_text)
+        result["final_english_text"] = output
+        result["metadata"]["agents_executed"].append("he_to_en")
 
     def execute_batch(
         self, input_data: List[Dict[str, Any]]
@@ -185,10 +210,4 @@ class TranslationPipelineController:
             >>> controller = TranslationPipelineController()
             >>> controller.save_results("results/test.json")
         """
-        output_file = Path(output_path)
-        output_file.parent.mkdir(parents=True, exist_ok=True)
-
-        with open(output_file, "w", encoding="utf-8") as f:
-            json.dump(self.results, f, indent=2, ensure_ascii=False)
-
-        logger.info(f"✓ Saved {len(self.results)} results to {output_path}")
+        self.result_manager.save_results(output_path)

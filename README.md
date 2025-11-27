@@ -100,7 +100,14 @@ Final Output → Semantic Distance Analysis
    source venv/bin/activate  # Windows: venv\Scripts\activate
    ```
 
-3. **Install dependencies**:
+3. **Install package in development mode** (recommended):
+   ```bash
+   pip install -e .
+   ```
+
+   This installs the package with all dependencies from `requirements.txt` and makes the `src` modules importable.
+
+   **Alternative** - Install dependencies only:
    ```bash
    pip install -r requirements.txt
    ```
@@ -110,6 +117,12 @@ Final Output → Semantic Distance Analysis
    - numpy, pandas, scipy
    - matplotlib, seaborn
    - scikit-learn
+   - pytest, pytest-cov (for testing)
+
+4. **Verify installation**:
+   ```bash
+   python -c "from src.analysis.embedding_generator import EmbeddingGenerator; print('✓ Installation successful')"
+   ```
 
 ## 🚀 Usage (Reproducing Results)
 
@@ -129,7 +142,7 @@ Output: `data/input/sentences.json` (5 sentences × 7 error levels = 35 variants
 
 For reference, the helper script shows how results were organized:
 ```bash
-python3 run_real_experiment.py
+python3 scripts/run_real_experiment.py
 ```
 
 ### 3. Analyze Semantic Drift
@@ -137,7 +150,7 @@ python3 run_real_experiment.py
 Compute embeddings and semantic distances from real translations:
 
 ```bash
-python3 run_real_analysis.py
+python3 scripts/run_real_analysis.py
 ```
 
 **Output**:
@@ -167,7 +180,7 @@ Using Sentence-BERT Embeddings with Real Claude Agent Data
 Create publication-quality graphs with statistical analysis:
 
 ```bash
-python3 generate_real_graphs.py
+python3 scripts/generate_real_graphs.py
 ```
 
 **Output**:
@@ -210,16 +223,19 @@ multi-agent-translation-pipeline/
 │   ├── test_controller/
 │   └── test_analysis/
 │
-├── run_real_analysis.py                  # Main analysis script (Sentence-BERT)
-├── generate_real_graphs.py               # Visualization generator
-├── run_real_experiment.py                # Experiment helper/organizer
+├── scripts/                              # Utility scripts
+│   ├── run_real_analysis.py             # Main analysis script (Sentence-BERT)
+│   ├── generate_real_graphs.py          # Visualization generator
+│   └── run_real_experiment.py           # Experiment helper/organizer
 │
 ├── EXPERIMENT_RESULTS.md                 # 📄 Full experimental report
 ├── COMPLETION_SUMMARY.md                 # 📄 Quick findings overview
 ├── COMPLETION_REPORT.md                  # 📄 Detailed completion status
 ├── PROJECT_SUMMARY.md                    # 📄 Implementation metrics
 ├── README.md                             # This file
-└── requirements.txt                      # Python dependencies
+├── requirements.txt                      # Python dependencies
+├── setup.py                              # 📦 Package installation configuration
+└── pytest.ini                            # 🧪 Test configuration (70% coverage threshold)
 ```
 
 ## 📈 Sample Results
@@ -263,16 +279,49 @@ multi-agent-translation-pipeline/
 
 ## 🧪 Testing
 
+This project includes comprehensive test coverage with **62+ unit and integration tests**.
+
+### Test Configuration (`pytest.ini`)
+
+The project uses `pytest.ini` for standardized test configuration:
+- **Coverage threshold**: 70% minimum (configured with `--cov-fail-under=70`)
+- **Test discovery**: Automatic from `tests/` directory
+- **Reports**: HTML, XML, and terminal coverage reports
+- **Test markers**: `slow`, `integration`, `unit` for selective test runs
+
 ### Run Complete Test Suite
 
 ```bash
-pytest tests/ -v
+pytest
 ```
 
-### Run with Coverage
+This uses settings from `pytest.ini` and generates coverage reports automatically.
+
+**Alternative** - Run with explicit options:
+```bash
+pytest tests/ -v --cov=src --cov-report=term-missing --cov-report=html
+```
+
+### View Coverage Report
+
+After running tests, open the HTML coverage report:
+```bash
+open htmlcov/index.html  # macOS
+xdg-open htmlcov/index.html  # Linux
+start htmlcov/index.html  # Windows
+```
+
+### Run Specific Test Categories
 
 ```bash
-pytest tests/ --cov=src --cov-report=term-missing --cov-report=html
+# Run only unit tests
+pytest -m unit
+
+# Run only integration tests
+pytest -m integration
+
+# Run all except slow tests
+pytest -m "not slow"
 ```
 
 ### Code Quality
@@ -287,6 +336,20 @@ mypy src/
 # Linting
 pylint src/
 ```
+
+## 📦 Package Configuration (`setup.py`)
+
+The project includes a `setup.py` for professional package management:
+
+- **Development installation**: `pip install -e .` installs the package in editable mode
+- **Dependency management**: Automatically installs all requirements from `requirements.txt`
+- **Console scripts**: Entry points for main utilities (configured for future use)
+- **Package metadata**: Version, author, description, and classifiers
+
+**Benefits**:
+- Makes `src` modules importable from anywhere
+- Follows Python packaging best practices
+- Enables proper distribution if needed
 
 ## 🎓 Academic Context
 
