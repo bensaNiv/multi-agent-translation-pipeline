@@ -1,0 +1,36 @@
+# Statistical Analysis Summary
+
+## Correlation Analysis
+
+### Cosine Distance
+- Pearson correlation: r = 0.7885, p-value = 0.000000
+- Spearman correlation: ρ = 0.8034, p-value = 0.000000
+- **Highly significant** positive correlation (p < 0.001)
+
+### Euclidean Distance
+- Pearson correlation: r = 0.8314, p-value = 0.000000
+- Spearman correlation: ρ = 0.8034, p-value = 0.000000
+- **Highly significant** positive correlation (p < 0.001)
+
+## Mean Distances by Error Level
+
+| Error % | Cosine Distance (mean ± std) | Euclidean Distance (mean ± std) | N |
+|---------|------------------------------|----------------------------------|---|
+| 0% | 0.0126 ± 0.0069 | 0.1523 ± 0.0507 | 5 |
+| 10% | 0.0828 ± 0.0568 | 0.3879 ± 0.1378 | 5 |
+| 20% | 0.1836 ± 0.1077 | 0.5766 ± 0.2080 | 5 |
+| 25% | 0.2042 ± 0.1460 | 0.6137 ± 0.1993 | 5 |
+| 30% | 0.2875 ± 0.0880 | 0.7515 ± 0.1131 | 5 |
+| 40% | 0.2561 ± 0.1201 | 0.7007 ± 0.1630 | 5 |
+| 50% | 0.4314 ± 0.1120 | 0.9223 ± 0.1232 | 5 |
+
+## Interpretation
+
+Based on the statistical analysis:
+
+1. **Confirmed positive correlation**: As spelling error rate increases, semantic drift (cosine distance) increases with correlation r = 0.788.
+
+2. **Non-monotonic pattern observed**: Semantic distance does not increase uniformly. This may indicate:
+   - Small sample size effects (n=5 per error level)
+   - Mock translation artifacts
+   - Need for real BERT embeddings for accurate measurement

@@ -15,7 +15,9 @@
       "Bash(chmod:*)",
       "Bash(bash:*)",
       "Bash(cat:*)",
-      "Bash(tree:*)"
+      "Bash(tree:*)",
+      "Bash(pip install:*)",
+      "Bash(source:*)"
     ],
     "deny": [],
     "ask": []
