@@ -85,10 +85,5 @@ data/input/*.json
 *.weights
 models/*.pt
 
-# Results and outputs
-results/experiments/*.json
-results/graphs/*.png
-results/graphs/*.pdf
-
 # OS
 Thumbs.db

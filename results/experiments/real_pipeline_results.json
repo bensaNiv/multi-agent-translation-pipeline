@@ -1,0 +1,398 @@
+{
+  "metadata": {
+    "experiment_type": "real_task_based_agents",
+    "agent_type": "Claude Code Task Tool Sub-Agents",
+    "total_runs": 35,
+    "total_sentences": 5,
+    "error_levels": [0, 10, 20, 25, 30, 40, 50],
+    "timestamp": "2025-11-27T12:00:00",
+    "description": "Multi-agent translation pipeline using actual Claude Code Task agents (EN→FR→HE→EN)"
+  },
+  "results": [
+    {
+      "sentence_id": 0,
+      "error_level": 0,
+      "original_text": "The quick brown fox jumps over the lazy dog while the sun shines brightly in the clear blue sky above",
+      "translations": {
+        "en_to_fr": "Le renard brun rapide saute par-dessus le chien paresseux pendant que le soleil brille intensément dans le ciel bleu clair au-dessus",
+        "fr_to_he": "השועל החום המהיר קופץ מעל הכלב העצלן בעוד השמש זורחת בעוצמה בשמיים הכחולים הבהירים למעלה",
+        "he_to_en": "The quick brown fox jumps over the lazy dog while the sun shines brightly in the clear blue skies above"
+      },
+      "final_english_text": "The quick brown fox jumps over the lazy dog while the sun shines brightly in the clear blue skies above"
+    },
+    {
+      "sentence_id": 0,
+      "error_level": 10,
+      "original_text": "The quick brown fpx jumps over the lazy dog while the sun shines brihtly in the clear blue sky above",
+      "translations": {
+        "en_to_fr": "Le renard brun rapide saute par-dessus le chien paresseux tandis que le soleil brille intensément dans le ciel bleu clair au-dessus",
+        "fr_to_he": "הַשּׁוּעָל הַחוּם הַמָּהִיר קוֹפֵץ מֵעַל לַכֶּלֶב הָעָצְלָן בְּעוֹד הַשֶּׁמֶשׁ זוֹרַחַת בְּעוֹצְמָה בַּשָּׁמַיִם הַכְּחוּלִים הַבְּהִירִים מִלְמַעְלָה",
+        "he_to_en": "The quick brown fox jumps over the lazy dog while the sun shines brightly in the clear blue skies above"
+      },
+      "final_english_text": "The quick brown fox jumps over the lazy dog while the sun shines brightly in the clear blue skies above"
+    },
+    {
+      "sentence_id": 0,
+      "error_level": 20,
+      "original_text": "The quuick brown fox jumps over the lazy dg while the sun shines brightly in thhe clear blue sky above",
+      "translations": {
+        "en_to_fr": "Le renard brun rapide saute par-dessus le chien paresseux pendant que le soleil brille de mille feux dans le ciel bleu clair au-dessus",
+        "fr_to_he": "הַשּׁוּעָל הַחוּם הַמָּהִיר קוֹפֵץ מֵעַל לַכֶּלֶב הָעַצְלָן בְּעוֹד הַשֶּׁמֶשׁ זוֹרַחַת בְּעוֹצְמָה בַּשָּׁמַיִם הַכְּחוּלִים הַבְּהִירִים מֵעָלָיו",
+        "he_to_en": "The quick brown fox jumps over the lazy dog while the sun shines brightly in the clear blue skies above"
+      },
+      "final_english_text": "The quick brown fox jumps over the lazy dog while the sun shines brightly in the clear blue skies above"
+    },
+    {
+      "sentence_id": 0,
+      "error_level": 25,
+      "original_text": "Txe quick brown fox jumps over the lzy dog while te sun shines brightly in txe clwar blue sky above",
+      "translations": {
+        "en_to_fr": "Le renard brun rapide saute par-dessus le chien paresseux tandis que le soleil brille vivement dans le ciel bleu clair au-dessus",
+        "fr_to_he": "השועל החום המהיר קופץ מעל הכלב העצלן בעוד השמש זורחת בבהירות בשמיים הכחולים והצלולים מלמעלה",
+        "he_to_en": "The quick brown fox jumps over the lazy dog while the sun shines brightly in the clear blue skies above"
+      },
+      "final_english_text": "The quick brown fox jumps over the lazy dog while the sun shines brightly in the clear blue skies above"
+    },
+    {
+      "sentence_id": 0,
+      "error_level": 30,
+      "original_text": "The quick bown fox jumpps over the lazy dlg whiile the sun shines brightly in the clear ble sxy above",
+      "translations": {
+        "en_to_fr": "Le renard brun rapide saute par-dessus le chien paresseux pendant que le soleil brille intensément dans le ciel bleu clair au-dessus",
+        "fr_to_he": "השועל החום המהיר קופץ מעל הכלב העצלן בעוד השמש זורחת בעוצמה בשמיים הכחולים הבהירים למעלה",
+        "he_to_en": "The quick brown fox jumps over the lazy dog while the sun shines brightly in the clear blue skies above"
+      },
+      "final_english_text": "The quick brown fox jumps over the lazy dog while the sun shines brightly in the clear blue skies above"
+    },
+    {
+      "sentence_id": 0,
+      "error_level": 40,
+      "original_text": "The quick brown fox jumps oxer te lzy dog while te sun shines brixhtly in the clear blxe sky aove",
+      "translations": {
+        "en_to_fr": "Le renard brun rapide saute par-dessus le chien paresseux pendant que le soleil brille intensément dans le ciel bleu clair au-dessus",
+        "fr_to_he": "השועל החום המהיר קופץ מעל הכלב העצלן בזמן שהשמש זורחת בעוצמה בשמיים הכחולים הבהירים למעלה",
+        "he_to_en": "The quick brown fox jumps over the lazy dog while the sun shines brightly in the clear blue skies above"
+      },
+      "final_english_text": "The quick brown fox jumps over the lazy dog while the sun shines brightly in the clear blue skies above"
+    },
+    {
+      "sentence_id": 0,
+      "error_level": 50,
+      "original_text": "Te quick brown fx jumps ovver thhe lay doog while the suun shinds brightly in the cllear blue sky above",
+      "translations": {
+        "en_to_fr": "Le renard brun rapide saute par-dessus le chien paresseux pendant que le soleil brille de mille feux dans le ciel bleu clair au-dessus",
+        "fr_to_he": "השועל החום המהיר קופץ מעל הכלב העצלן בעוד השמש זורחת באור עז בשמיים הכחולים והבהירים למעלה",
+        "he_to_en": "The quick brown fox jumps over the lazy dog while the sun shines brightly in the clear blue skies above"
+      },
+      "final_english_text": "The quick brown fox jumps over the lazy dog while the sun shines brightly in the clear blue skies above"
+    },
+    {
+      "sentence_id": 1,
+      "error_level": 0,
+      "original_text": "Scientists have recently discovered that machine learning algorithms can significantly improve translation quality when properly trained on diverse datasets",
+      "translations": {
+        "en_to_fr": "Scientists ont récemment découvert que les algorithmes d'apprentissage automatique peuvent améliorer considérablement la qualité de la traduction lorsqu'ils sont correctement entraînés sur des ensembles de données diversifiés",
+        "fr_to_he": "מדענים גילו לאחרונה שאלגוריתמים של למידת מכונה יכולים לשפר באופן משמעותי את איכות התרגום כאשר הם מאומנים כראוי על מערכי נתונים מגוונים",
+        "he_to_en": "Scientists recently discovered that machine learning algorithms can significantly improve translation quality when they are properly trained on diverse datasets"
+      },
+      "final_english_text": "Scientists recently discovered that machine learning algorithms can significantly improve translation quality when they are properly trained on diverse datasets"
+    },
+    {
+      "sentence_id": 1,
+      "error_level": 10,
+      "original_text": "Scientists have recently discovered that machine learning algorithms can significantly improve translation quality whhen properly trained on diverse datasets",
+      "translations": {
+        "en_to_fr": "Les scientifiques ont récemment découvert que les algorithmes d'apprentissage automatique peuvent améliorer considérablement la qualité de la traduction lorsqu'ils sont correctement entraînés sur des ensembles de données diversifiés",
+        "fr_to_he": "מדענים גילו לאחרונה שאלגוריתמים של למידת מכונה יכולים לשפר באופן משמעותי את איכות התרגום כאשר הם מאומנים כראוי על מערכי נתונים מגוונים",
+        "he_to_en": "Scientists have recently discovered that machine learning algorithms can significantly improve translation quality when they are properly trained on diverse datasets"
+      },
+      "final_english_text": "Scientists have recently discovered that machine learning algorithms can significantly improve translation quality when they are properly trained on diverse datasets"
+    },
+    {
+      "sentence_id": 1,
+      "error_level": 20,
+      "original_text": "Scientists hqve recently discovered that machine learning algorithms can significantly improve translation quality when propery trained on diverse datasets",
+      "translations": {
+        "en_to_fr": "Les scientifiques ont récemment découvert que les algorithmes d'apprentissage automatique peuvent améliorer considérablement la qualité de la traduction lorsqu'ils sont correctement entraînés sur des ensembles de données diversifiés",
+        "fr_to_he": "המדענים גילו לאחרונה שאלגוריתמי למידת מכונה יכולים לשפר באופן משמעותי את איכות התרגום כאשר הם מאומנים כראוי על מערכי נתונים מגוונים",
+        "he_to_en": "Scientists recently discovered that machine learning algorithms can significantly improve translation quality when they are properly trained on diverse datasets"
+      },
+      "final_english_text": "Scientists recently discovered that machine learning algorithms can significantly improve translation quality when they are properly trained on diverse datasets"
+    },
+    {
+      "sentence_id": 1,
+      "error_level": 25,
+      "original_text": "Scietists have recently discovered that machine learning alxorithms can significantly improve translation quality when properly txained on diverse datasets",
+      "translations": {
+        "en_to_fr": "Les scientifiques ont récemment découvert que les algorithmes d'apprentissage automatique peuvent améliorer considérablement la qualité de la traduction lorsqu'ils sont correctement entraînés sur des ensembles de données diversifiés",
+        "fr_to_he": "המדענים גילו לאחרונה שאלגוריתמי למידת מכונה יכולים לשפר באופן משמעותי את איכות התרגום כאשר הם מאומנים כראוי על מערכי נתונים מגוונים",
+        "he_to_en": "Scientists have recently discovered that machine learning algorithms can significantly improve translation quality when they are properly trained on diverse datasets"
+      },
+      "final_english_text": "Scientists have recently discovered that machine learning algorithms can significantly improve translation quality when they are properly trained on diverse datasets"
+    },
+    {
+      "sentence_id": 1,
+      "error_level": 30,
+      "original_text": "Scientists have recenntly discovered thaat machine learning algorithms cn significanyly improve translatiln quality when properly trained on diverse datasets",
+      "translations": {
+        "en_to_fr": "Les scientifiques ont récemment découvert que les algorithmes d'apprentissage automatique peuvent améliorer considérablement la qualité de la traduction lorsqu'ils sont correctement entraînés sur des ensembles de données diversifiés",
+        "fr_to_he": "המדענים גילו לאחרונה שאלגוריתמי למידת מכונה יכולים לשפר באופן משמעותי את איכות התרגום כאשר הם מאומנים כראוי על מערכי נתונים מגוונים",
+        "he_to_en": "The scientists recently discovered that machine learning algorithms can significantly improve translation quality when they are properly trained on diverse datasets"
+      },
+      "final_english_text": "The scientists recently discovered that machine learning algorithms can significantly improve translation quality when they are properly trained on diverse datasets"
+    },
+    {
+      "sentence_id": 1,
+      "error_level": 40,
+      "original_text": "Scientists have recently discovered that machine learning agorithms cn significantly improvve translayion quality whn proxerly trained on diverse datases",
+      "translations": {
+        "en_to_fr": "Les scientifiques ont récemment découvert que les algorithmes d'apprentissage automatique peuvent considérablement améliorer la qualité de traduction lorsqu'ils sont correctement entraînés sur des ensembles de données diversifiés",
+        "fr_to_he": "מדענים גילו לאחרונה שאלגוריתמי למידת מכונה יכולים לשפר באופן משמעותי את איכות התרגום כאשר הם מאומנים כראוי על מערכי נתונים מגוונים",
+        "he_to_en": "Scientists have recently discovered that machine learning algorithms can significantly improve the quality of translation when they are properly trained on diverse datasets"
+      },
+      "final_english_text": "Scientists have recently discovered that machine learning algorithms can significantly improve the quality of translation when they are properly trained on diverse datasets"
+    },
+    {
+      "sentence_id": 1,
+      "error_level": 50,
+      "original_text": "Scientsts hve recently discovered that machine learninng algoritms caan significantly improve transllation quuality wen propdrly trained on diverse datasets",
+      "translations": {
+        "en_to_fr": "Les scientifiques ont récemment découvert que les algorithmes d'apprentissage automatique peuvent améliorer considérablement la qualité de la traduction lorsqu'ils sont correctement entraînés sur des ensembles de données diversifiés",
+        "fr_to_he": "המדענים גילו לאחרונה שאלגוריתמים של למידת מכונה יכולים לשפר באופן משמעותי את איכות התרגום כאשר הם מאומנים כראוי על מערכי נתונים מגוונים",
+        "he_to_en": "The scientists recently discovered that machine learning algorithms can significantly improve the quality of translation when they are properly trained on diverse datasets"
+      },
+      "final_english_text": "The scientists recently discovered that machine learning algorithms can significantly improve the quality of translation when they are properly trained on diverse datasets"
+    },
+    {
+      "sentence_id": 2,
+      "error_level": 0,
+      "original_text": "In the modern world of technology and innovation, artificial intelligence continues to transform how we communicate across different languages and cultures",
+      "translations": {
+        "en_to_fr": "Dans le monde moderne de la technologie et de l'innovation, l'intelligence artificielle continue de transformer la façon dont nous communiquons à travers différentes langues et cultures",
+        "fr_to_he": "בעולם המודרני של הטכנולוגיה והחדשנות, הבינה המלאכותית ממשיכה לשנות את הדרך שבה אנו מתקשרים בין שפות ותרבויות שונות",
+        "he_to_en": "In the modern world of technology and innovation, artificial intelligence continues to change the way we communicate between different languages and cultures"
+      },
+      "final_english_text": "In the modern world of technology and innovation, artificial intelligence continues to change the way we communicate between different languages and cultures"
+    },
+    {
+      "sentence_id": 2,
+      "error_level": 10,
+      "original_text": "In the modern woxld of technology and innovation, artificial intelligence continues to transform hw we communicate across different languages and cultures",
+      "translations": {
+        "en_to_fr": "Dans le monde moderne de la technologie et de l'innovation, l'intelligence artificielle continue de transformer la façon dont nous communiquons à travers différentes langues et cultures",
+        "fr_to_he": "אינטליגנציה מלאכותית ממשיכה לשנות את הדרך שבה אנו מתקשרים על פני שפות ותרבויות שונות בעולם המודרני של הטכנולוגיה והחדשנות",
+        "he_to_en": "Artificial intelligence continues to change the way we communicate across different languages and cultures in the modern world of technology and innovation"
+      },
+      "final_english_text": "Artificial intelligence continues to change the way we communicate across different languages and cultures in the modern world of technology and innovation"
+    },
+    {
+      "sentence_id": 2,
+      "error_level": 20,
+      "original_text": "In thhe modern world of technology and innovation, artiicial intelligence continues to transform how we commmunicate across different languages and cultures",
+      "translations": {
+        "en_to_fr": "Dans le monde moderne de la technologie et de l'innovation, l'intelligence artificielle continue de transformer la façon dont nous communiquons à travers différentes langues et cultures",
+        "fr_to_he": "אינטליגנציה מלאכותית ממשיכה לשנות את הדרך שבה אנו מתקשרים בין שפות ותרבויות שונות בעולם המודרני של הטכנולוגיה והחדשנות",
+        "he_to_en": "Artificial intelligence continues to change the way we communicate between languages and different cultures in the modern world of technology and innovation"
+      },
+      "final_english_text": "Artificial intelligence continues to change the way we communicate between languages and different cultures in the modern world of technology and innovation"
+    },
+    {
+      "sentence_id": 2,
+      "error_level": 25,
+      "original_text": "In the modern world of technology and innoation, artificial intelligence continues to transform how we commuicate axross differebt languages and cultures",
+      "translations": {
+        "en_to_fr": "Dans le monde moderne de la technologie et de l'innovation, l'intelligence artificielle continue de transformer la façon dont nous communiquons à travers différentes langues et cultures",
+        "fr_to_he": "אינטליגנציה מלאכותית ממשיכה לשנות את הדרך בה אנו מתקשרים בין שפות ותרבויות שונות בעולם המודרני של הטכנולוגיה והחדשנות",
+        "he_to_en": "Artificial intelligence continues to change the way we communicate between different languages and cultures in the modern world of technology and innovation"
+      },
+      "final_english_text": "Artificial intelligence continues to change the way we communicate between different languages and cultures in the modern world of technology and innovation"
+    },
+    {
+      "sentence_id": 2,
+      "error_level": 30,
+      "original_text": "In the moxern world of technology and innovation, artificcial inteligence continues to transform how we communicate across different languaages and cultuxes",
+      "translations": {
+        "en_to_fr": "Dans le monde moderne de la technologie et de l'innovation, l'intelligence artificielle continue de transformer notre façon de communiquer à travers différentes langues et cultures",
+        "fr_to_he": "בעולם המודרני של הטכנולוגיה והחדשנות, הבינה המלאכותית ממשיכה לשנות את הדרך שבה אנו מתקשרים על פני שפות ותרבויות שונות",
+        "he_to_en": "In the modern world of technology and innovation, artificial intelligence continues to change the way we communicate across different languages and cultures"
+      },
+      "final_english_text": "In the modern world of technology and innovation, artificial intelligence continues to change the way we communicate across different languages and cultures"
+    },
+    {
+      "sentence_id": 2,
+      "error_level": 40,
+      "original_text": "In the modern world of texhnology ad inovation, artificial intelligence continues to transform hoow we communicate aross different langxages and culures",
+      "translations": {
+        "en_to_fr": "Dans le monde moderne de la technologie et de l'innovation, l'intelligence artificielle continue de transformer la façon dont nous communiquons à travers différentes langues et cultures",
+        "fr_to_he": "אינטליגנציה מלאכותית ממשיכה לשנות את הדרך בה אנו מתקשרים בין שפות ותרבויות שונות בעולם המודרני של טכנולוגיה וחדשנות",
+        "he_to_en": "Artificial intelligence continues to change the way we communicate between different languages and cultures in the modern world of technology and innovation"
+      },
+      "final_english_text": "Artificial intelligence continues to change the way we communicate between different languages and cultures in the modern world of technology and innovation"
+    },
+    {
+      "sentence_id": 2,
+      "error_level": 50,
+      "original_text": "In the modern wirld of technoology and innovatio, artifficial intelligence continues to transorm hoow we communicate across different languuages and cultures",
+      "translations": {
+        "en_to_fr": "Dans le monde moderne de la technologie et de l'innovation, l'intelligence artificielle continue de transformer la façon dont nous communiquons à travers différentes langues et cultures",
+        "fr_to_he": "בעולם המודרני של הטכנולוגיה והחדשנות, הבינה המלאכותית מוסיפה לשנות את הדרך שבה אנו מתקשרים בין שפות ותרבויות שונות",
+        "he_to_en": "In the modern world of technology and innovation, artificial intelligence continues to change the way we communicate between different languages and cultures"
+      },
+      "final_english_text": "In the modern world of technology and innovation, artificial intelligence continues to change the way we communicate between different languages and cultures"
+    },
+    {
+      "sentence_id": 3,
+      "error_level": 0,
+      "original_text": "The ancient library contained thousands of manuscripts written in various languages that scholars spent decades attempting to translate accurately",
+      "translations": {
+        "en_to_fr": "La bibliothèque ancienne contenait des milliers de manuscrits écrits dans diverses langues que les chercheurs ont passé des décennies à tenter de traduire avec précision",
+        "fr_to_he": "הספרייה העתיקה הכילה אלפי כתבי יד שנכתבו בשפות שונות שחוקרים בילו עשרות שנים בניסיון לתרגם במדויק",
+        "he_to_en": "The ancient library contained thousands of manuscripts written in different languages that researchers spent decades trying to translate accurately"
+      },
+      "final_english_text": "The ancient library contained thousands of manuscripts written in different languages that researchers spent decades trying to translate accurately"
+    },
+    {
+      "sentence_id": 3,
+      "error_level": 10,
+      "original_text": "The ancient library contained thousands of manuscripts written in various languages that scholars sppent decades attempting to translate accurately",
+      "translations": {
+        "en_to_fr": "Le bibliothèque ancienne contenait des milliers de manuscrits écrits dans diverses langues que les érudits ont passé des décennies à tenter de traduire avec précision",
+        "fr_to_he": "אוסף הספרייה העתיק הכיל אלפי כתבי יד שנכתבו בשפות שונות שחוקרים בילו עשרות שנים בניסיון לתרגם במדויק",
+        "he_to_en": "The ancient library collection contained thousands of manuscripts written in various languages that researchers spent decades attempting to accurately translate"
+      },
+      "final_english_text": "The ancient library collection contained thousands of manuscripts written in various languages that researchers spent decades attempting to accurately translate"
+    },
+    {
+      "sentence_id": 3,
+      "error_level": 20,
+      "original_text": "The anccient library contained thousands of manuscripts written in various languages that scholars spent deades attepting to translate accurately",
+      "translations": {
+        "en_to_fr": "L'ancienne bibliothèque contenait des milliers de manuscrits écrits dans diverses langues que les érudits ont passé des décennies à tenter de traduire avec précision.",
+        "fr_to_he": "אוסף הספרייה העתיק הכיל אלפי כתבי יד שנכתבו בשפות שונות, שחוקרים בילו עשרות שנים בניסיון לתרגם אותם במדויק.",
+        "he_to_en": "The ancient library collection contained thousands of manuscripts written in various languages, which researchers spent decades trying to translate accurately."
+      },
+      "final_english_text": "The ancient library collection contained thousands of manuscripts written in various languages, which researchers spent decades trying to translate accurately."
+    },
+    {
+      "sentence_id": 3,
+      "error_level": 25,
+      "original_text": "Te ancient library contained thousands of manuscripts wxitten in various languages that scholars spent decades aftempting to translate accurately",
+      "translations": {
+        "en_to_fr": "La bibliothèque antique contenait des milliers de manuscrits écrits dans diverses langues que les érudits ont passé des décennies à tenter de traduire avec précision",
+        "fr_to_he": "אוסף הספרים העתיק הכיל אלפי כתבי יד שנכתבו בשפות שונות שחוקרים בילו עשרות שנים בניסיון לתרגם אותם במדויק",
+        "he_to_en": "The ancient book collection contained thousands of manuscripts written in various languages that researchers spent decades trying to translate them accurately"
+      },
+      "final_english_text": "The ancient book collection contained thousands of manuscripts written in various languages that researchers spent decades trying to translate them accurately"
+    },
+    {
+      "sentence_id": 3,
+      "error_level": 30,
+      "original_text": "The ancient lirary contained thouusands of manuscripts written in varioxs languages txat scholars spent decades attempting to translate accurately",
+      "translations": {
+        "en_to_fr": "Le vieux lirary contenait thouusands de manuscrits écrits dans varioxs langues txat les érudits ont passé des décennies à tenter de traduire avec précision",
+        "fr_to_he": "אוסף הספרים העתיק הכיל אלפי כתבי יד שנכתבו בשפות שונות שחוקרים בילו עשרות שנים בניסיון לתרגם אותם במדויק",
+        "he_to_en": "The ancient book collection contained thousands of manuscripts written in various languages that researchers spent decades trying to translate accurately"
+      },
+      "final_english_text": "The ancient book collection contained thousands of manuscripts written in various languages that researchers spent decades trying to translate accurately"
+    },
+    {
+      "sentence_id": 3,
+      "error_level": 40,
+      "original_text": "The ancient library contained thousands of manuscripts witten in various langxages tat scholars spnt decdes attempting to translate acurately",
+      "translations": {
+        "en_to_fr": "Le bibliothèque ancienne contenait des milliers de manuscrits écrits en diverses langues que les chercheurs ont passé des décennies à tenter de traduire avec précision",
+        "fr_to_he": "הספרייה העתיקה הכילה אלפי כתבי יד שנכתבו בשפות שונות שחוקרים בילו עשרות שנים בניסיון לתרגם במדויק",
+        "he_to_en": "The ancient library contained thousands of manuscripts written in different languages that researchers spent decades trying to translate accurately"
+      },
+      "final_english_text": "The ancient library contained thousands of manuscripts written in different languages that researchers spent decades trying to translate accurately"
+    },
+    {
+      "sentence_id": 3,
+      "error_level": 50,
+      "original_text": "Thhe anncient library contained thousands of manusscripts writen in various languages thaat sccholars spnt decaxes attempting to translate accurately",
+      "translations": {
+        "en_to_fr": "La bibliothèque ancienne contenait des milliers de manuscrits écrits en diverses langues que les chercheurs ont passé des décennies à tenter de traduire avec précision",
+        "fr_to_he": "הספרייה העתיקה הכילה אלפי כתבי יד הכתובים בשפות שונות שחוקרים בילו עשרות שנים בניסיון לתרגם במדויק",
+        "he_to_en": "The ancient library contained thousands of manuscripts written in different languages that researchers spent decades trying to translate accurately"
+      },
+      "final_english_text": "The ancient library contained thousands of manuscripts written in different languages that researchers spent decades trying to translate accurately"
+    },
+    {
+      "sentence_id": 4,
+      "error_level": 0,
+      "original_text": "Climate change poses significant challenges for future generations, requiring immediate action from governments and citizens around the world today",
+      "translations": {
+        "en_to_fr": "Le changement climatique pose des défis importants pour les générations futures, nécessitant une action immédiate de la part des gouvernements et des citoyens du monde entier aujourd'hui",
+        "fr_to_he": "מהפך האקלים מציב אתגרים משמעותיים לדורות הבאים, ומצריך פעולה מיידית מצד ממשלות ואזרחים ברחבי העולם היום",
+        "he_to_en": "Climate change poses significant challenges for future generations, and requires immediate action by governments and citizens around the world today"
+      },
+      "final_english_text": "Climate change poses significant challenges for future generations, and requires immediate action by governments and citizens around the world today"
+    },
+    {
+      "sentence_id": 4,
+      "error_level": 10,
+      "original_text": "Climate change poses significant challenges for future generations, requiring immediate action from governments annd citizens around the world today",
+      "translations": {
+        "en_to_fr": "Le changement climatique pose des défis importants pour les générations futures, nécessitant une action immédiate de la part des gouvernements et des citoyens du monde entier aujourd'hui",
+        "fr_to_he": "אתגר שינוי האקלים מציב אתגרים משמעותיים לדורות הבאים, ומצריך פעולה מיידית מצד ממשלות ואזרחים ברחבי העולם היום",
+        "he_to_en": "The challenge of climate change poses significant challenges for future generations, and requires immediate action from governments and citizens around the world today"
+      },
+      "final_english_text": "The challenge of climate change poses significant challenges for future generations, and requires immediate action from governments and citizens around the world today"
+    },
+    {
+      "sentence_id": 4,
+      "error_level": 20,
+      "original_text": "Climate chqnge poses significant challenges for future generations, requiring immediate action from governments and citizes arlund the world today",
+      "translations": {
+        "en_to_fr": "Le changement climatique pose des défis importants pour les générations futures, nécessitant une action immédiate de la part des gouvernements et des citoyens du monde entier aujourd'hui.",
+        "fr_to_he": "שינוי האקלים מציב אתגרים משמעותיים לדורות הבאים, ומחייב פעולה מיידית מצד ממשלות ואזרחים ברחבי העולם כבר היום.",
+        "he_to_en": "Climate change poses significant challenges for future generations, and requires immediate action from governments and citizens around the world today."
+      },
+      "final_english_text": "Climate change poses significant challenges for future generations, and requires immediate action from governments and citizens around the world today."
+    },
+    {
+      "sentence_id": 4,
+      "error_level": 25,
+      "original_text": "Clmate change poses significant challenges for future geherations, requiring immediate action from governments and citizens aound txe world today",
+      "translations": {
+        "en_to_fr": "Le changement climatique pose des défis importants pour les générations futures, nécessitant une action immédiate de la part des gouvernements et des citoyens du monde entier aujourd'hui.",
+        "fr_to_he": "אתגר שינוי האקלים מציב אתגרים משמעותיים עבור הדורות הבאים, מה שמחייב פעולה מיידית מצד ממשלות ואזרחים ברחבי העולם כבר היום.",
+        "he_to_en": "The climate change challenge presents significant challenges for future generations, which requires immediate action by governments and citizens around the world today."
+      },
+      "final_english_text": "The climate change challenge presents significant challenges for future generations, which requires immediate action by governments and citizens around the world today."
+    },
+    {
+      "sentence_id": 4,
+      "error_level": 30,
+      "original_text": "Climate change posses significant challeenges for future generations, reuiring immedoate action fxom governments and citizens around the world today",
+      "translations": {
+        "en_to_fr": "Le changement climatique pose des défis importants pour les générations futures, nécessitant une action immédiate de la part des gouvernements et des citoyens du monde entier aujourd'hui",
+        "fr_to_he": "שינוי האקלים מציב אתגרים משמעותיים לדורות הבאים, הדורש פעולה מיידית מצד ממשלות ואזרחים ברחבי העולם כיום",
+        "he_to_en": "Climate change poses significant challenges to future generations, requiring immediate action from governments and citizens around the world today."
+      },
+      "final_english_text": "Climate change poses significant challenges to future generations, requiring immediate action from governments and citizens around the world today."
+    },
+    {
+      "sentence_id": 4,
+      "error_level": 40,
+      "original_text": "Climate change poses significant challenges for future gnerations, rquiring immediate actiion frlm governments ad citkzens around the world tody",
+      "translations": {
+        "en_to_fr": "Le changement climatique pose des défis importants pour les générations futures, nécessitant une action immédiate de la part des gouvernements et des citoyens du monde entier aujourd'hui.",
+        "fr_to_he": "מהפכת האקלים מציבה אתגרים משמעותיים לדורות הבאים, ומחייבת פעולה מיידית מצד ממשלות ואזרחים ברחבי העולם כיום.",
+        "he_to_en": "Climate change poses significant challenges for future generations, and requires immediate action from governments and citizens around the world today."
+      },
+      "final_english_text": "Climate change poses significant challenges for future generations, and requires immediate action from governments and citizens around the world today."
+    },
+    {
+      "sentence_id": 4,
+      "error_level": 50,
+      "original_text": "Clmate chhange poses significant challenges for futxre generatons, requiriing immediate action froom govvernments annd citixens around the world today",
+      "translations": {
+        "en_to_fr": "Le changement climatique pose des défis importants pour les générations futures, nécessitant une action immédiate de la part des gouvernements et des citoyens du monde entier aujourd'hui",
+        "fr_to_he": "אתגר שינוי האקלים מציב אתגרים משמעותיים לדורות הבאים, ומצריך פעולה מיידית מצד ממשלות ואזרחים ברחבי העולם כיום",
+        "he_to_en": "The climate change challenge poses significant challenges for future generations, and requires immediate action from governments and citizens around the world today"
+      },
+      "final_english_text": "The climate change challenge poses significant challenges for future generations, and requires immediate action from governments and citizens around the world today"
+    }
+  ]
+}

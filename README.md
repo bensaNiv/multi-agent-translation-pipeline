@@ -91,7 +91,7 @@ Final Output → Semantic Distance Analysis
 
 1. **Clone and navigate to project**:
    ```bash
-   cd project3/
+   cd multi-agent-translation-pipeline/
    ```
 
 2. **Create virtual environment**:
@@ -179,7 +179,7 @@ python3 generate_real_graphs.py
 ## 📂 Project Structure
 
 ```
-project3/
+multi-agent-translation-pipeline/
 ├── agents/                                # Claude Code agent definitions
 │   ├── agent_en_to_fr.json               # English → French translator
 │   ├── agent_fr_to_he.json               # French → Hebrew translator
