@@ -17,7 +17,8 @@
       "Bash(cat:*)",
       "Bash(tree:*)",
       "Bash(pip install:*)",
-      "Bash(source:*)"
+      "Bash(source:*)",
+      "Bash(echo:*)"
     ],
     "deny": [],
     "ask": []
